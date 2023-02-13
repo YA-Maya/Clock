@@ -1,0 +1,177 @@
+*::before *::after{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+:root{
+    --primary-color-second:#F71735;
+    --primary-color-second-dark:#b0071e;
+
+    --primary-color-min:black;
+    --primary-color-min-dark:black;
+
+    --primary-color-hour:black;
+    --primary-color-hour-dark:black;
+
+
+    --primary-color-light:white;
+    --primary-color-dark:#092c3e;
+
+    --primary-color-bot-light:#115c82;;
+    --primary-color-bot-dark:#092c3e;;
+}
+
+.check_box{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:right;
+    align-items:flex-start;
+    min-height: 100vh;
+}
+input[type="checkbox"]
+{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.check{
+    position: relative;
+    display: block;
+    width:40px;
+    height: 20px;
+    background: #092c3e;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+input[type="checkbox"]:checked ~ .check{
+    background: #fff;
+    box-shadow: 0 0 0 1200px #092c3e;
+}
+.check::before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+
+}
+input[type="chechbox"]:checked ~ .check::before
+{
+    transform: translateX(-50px);
+}
+
+.check:after
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #092c3e;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+input[type="checkbox"]:checked ~ .check::after
+{
+    transform: translateX(0px);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; 
+}
+
+.clock{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color-light);
+    border: 2px solid #092c3e;
+    position: relative;
+    border-radius: 50%;
+}
+
+.clock .number{
+    --roattion:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+
+}
+.clock .number1{ --rotation:30deg;}
+.clock .number2{ --rotation:60deg;}
+.clock .number3{ --rotation:90deg;}
+.clock .number4{ --rotation:120deg;}
+.clock .number5{ --rotation:150deg;}
+.clock .number6{ --rotation:180deg;}
+.clock .number7{ --rotation:210deg;}
+.clock .number8{ --rotation:240deg;}
+.clock .number9{ --rotation:270deg;}
+.clock .number10{ --rotation:300deg;}
+.clock .number11{ --rotation:330deg;}
+
+.clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 50%;
+    background-color: var(--primary-color-hour);
+    border: 1px solid #F0EDEE;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) *1deg));
+
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    background-color: #048a9c;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+
+.clock .hand.second{
+    width: 3px;
+    height: 45%;
+    background-color:#F71735;
+}
+
+.clock .hand.minute{
+    width: 7px;
+    height: 40%;
+    background-color: black;
+}
+
+.clock .hand.hour{
+    width: 10px;
+    height: 35%;
+    background-color: black;
+}
