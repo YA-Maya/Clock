@@ -12,5 +12,12 @@ As part of my efforts to improve my JavaScript skills, I developed a clock that 
 <img width="382" alt="Capture 10" src="https://user-images.githubusercontent.com/98185508/225891840-33097686-b8bd-464b-923f-14f105768a10.PNG">
 <img width="392" alt="Capture 9" src="https://user-images.githubusercontent.com/98185508/225891844-e49b292e-3357-4d5f-ad65-efb15683662d.PNG">
 
+
+
+
+https://user-images.githubusercontent.com/98185508/225951727-78ca36b3-a13d-4a28-9b27-42f8dba35ff3.mp4
+
+
+
 ## Author
 - [@YA-Maya](https://github.com/YA-Maya)
